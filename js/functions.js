@@ -13,22 +13,22 @@ let count = 5;
 let i     = 0;
 
 //Formas de Impresion o Salida en pantalla
-alert(name);
+// alert(name);
 console.log(cant_days);
 console.log("10");
 //Pantalla
-document.write(name);
-document.getElementById("text").innerHTML = "<h1>KevinSpinell</h1>"
-document.getElementById("text-two").innerText = "<h1>KevinSpinell</h1>"
+// document.write(name);
+document.getElementById("text").innerHTML = "<h1>José Coronel</h1>"
+document.getElementById("text-two").innerText = "<h1>José Coronel</h1>"
 
 // Librerias
 Swal.fire({
     icon: 'success',
-    title: 'Kevin Nalli Carrascal',
+    title: 'Jose Coronel Torres',
     text: 'Software Developer',
-    footer: '<a href="">Desea conocerme?</a>',
+    footer: '<a href="">Hola</a>',
     showConfirmButton: false,
-    timer : 5000,
+    timer : 1500,
     background : '#e5e5f6'
   })
 
@@ -45,12 +45,12 @@ let boolean = true;
 let array_num = [1,2,3,4,5,6,7];
 let array_str = ['Lunes','Martes','Miercoles','Jueves','Viernes',"Sabado","Domingo"];
 let array_mix = [1.4,'a',true];
-// let array_multidimensional = [
-//     {name:Kevin ,last_name: Carrascal , age:16 },
-//     {name:Luisa ,last_name:Morantes , age:17 },
-//     {name:Nalli ,last_name:Mawi , age:15 },
-//     {name:Fernanda ,last_name:xd , age:20 }
-// ]
+let array_mul = [
+    {name:"Kevin" ,last_name: "Carrascal" , age:"16" },
+    {name:"Luisa" ,last_name:"Morantes" , age:"17" },
+    {name:"Nalli" ,last_name:"Mawi" , age:"15" },
+    {name:"Fernanda" ,last_name:"xd" , age:"20" }
+]
 
 // OPERADORES 
 //Suma 
@@ -89,14 +89,14 @@ else{
 console.log(age);
 
 // FOR
-console.log(array_text.length)
-for(let i=0; i<array_text.length; i++){
+console.log(array_str.length)
+for(let i=0; i<array_str.length; i++){
   console.log(array_str[i]+ " " + (i+1));
 }
 
 // WHILE
 let j=0;
-while(j<array_text.length){
+while(j<array_str.length){
   console.log(array_str[j]+ " " + (j+1));
   j++;
 }
@@ -121,13 +121,13 @@ function change_color(){
 
 const btn_clear = document.querySelector("#limpiar")
 btn_clear.addEventListener("click", () =>{
-  document.body.style.backgroundColor = "red";
-  document.body.style.color = "white";
+  document.body.style.backgroundColor = "white";
+  document.body.style.color = "black";
 });
 
 // FORMULARIO DE REGISTRO
 const form_register = document.getElementById("form_register");
-const nombres = document.getElementById("nombres");
+let nombres = document.getElementById("nombres");
 const apellidos = document.getElementById("apellidos");
 const validation = document.getElementById("validation");
 
@@ -145,3 +145,27 @@ form_register.addEventListener("submit", event_name => {
   }
   validation.innertText = info;
 })
+function load_page(){
+  document.getElementById("nombres").focus();
+  document.getElementById("apellidos").disabled=true;
+  let date =new Date();
+  console.log(date.getFullYear());
+
+  for(let a=0;a<array_mul.length;a++){
+    console.log(array_mul[a].name);
+  }
+}
+
+function validate(){
+  alert("Funciona");
+  let nombres= document.getElementById("nombres").value;
+  console.log(nombres.length);
+  if(nombres.length > 2){
+    document.getElementById("apellidos").value
+    document.getElementById("apellidos").id
+    alert(nombres.concat(" Coronel"));
+    console.log(nombres.split(""));
+  }
+}
+
+
